@@ -1,0 +1,5 @@
+{
+  "name": "QX-Claw Dashboard",
+  "description": "A professional AI gateway dashboard (QX-Claw), featuring a modern multi-pane layout for chat, agents, and system monitoring.",
+  "requestFramePermissions": []
+}
