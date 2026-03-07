@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Sidebar } from './components/Sidebar';
 import { Header } from './components/Header';
 import { ChatArea } from './components/ChatArea';
 import { RightPanel } from './components/RightPanel';
+import { Onboarding } from './components/Onboarding';
 import { ViewType, NAV_ITEMS } from './types';
 import { motion, AnimatePresence } from 'motion/react';
 
@@ -10,11 +11,31 @@ export default function App() {
   const [activeView, setActiveView] = useState<ViewType>('chat');
   const [isRightPanelOpen, setIsRightPanelOpen] = useState(true);
   const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
+  const [isOnboardingComplete, setIsOnboardingComplete] = useState(false);
+
+  // Check if onboarding was already completed in this session
+  useEffect(() => {
+    const completed = localStorage.getItem('qx_claw_onboarding_complete');
+    if (completed === 'true') {
+      setIsOnboardingComplete(true);
+    }
+  }, []);
+
+  const handleOnboardingComplete = () => {
+    setIsOnboardingComplete(true);
+    localStorage.setItem('qx_claw_onboarding_complete', 'true');
+  };
 
   const activeItem = NAV_ITEMS.find(item => item.id === activeView);
 
   return (
     <div className="flex h-screen w-screen overflow-hidden bg-white font-sans text-gray-900">
+      <AnimatePresence>
+        {!isOnboardingComplete && (
+          <Onboarding onComplete={handleOnboardingComplete} />
+        )}
+      </AnimatePresence>
+
       {/* Left Sidebar */}
       <Sidebar 
         activeView={activeView} 
