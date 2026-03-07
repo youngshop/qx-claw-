@@ -39,7 +39,7 @@ export function Header({ title, onToggleRightPanel, isRightPanelOpen }: HeaderPr
           className={cn(
             "p-1.5 rounded-lg transition-all",
             isRightPanelOpen 
-              ? "bg-[#E11D48]/10 text-[#E11D48]" 
+              ? "bg-orange-50 text-[#FF6B00]" 
               : "text-gray-400 hover:text-gray-900 hover:bg-gray-100"
           )}
         >

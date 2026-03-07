@@ -87,9 +87,9 @@ export function Onboarding({ onComplete }: OnboardingProps) {
 
       <button 
         onClick={() => setStep('llm')}
-        className="group relative px-12 py-4 bg-[#E11D48] text-white rounded-2xl font-bold text-lg shadow-xl shadow-red-200 hover:bg-[#BE123C] hover:scale-105 transition-all flex items-center gap-3"
+        className="group relative px-12 py-4 bg-[#FF6B00] text-white rounded-2xl font-bold text-lg shadow-xl shadow-orange-200 hover:bg-[#E66000] hover:scale-105 transition-all flex items-center gap-3"
       >
-        领养它
+        领养 QX-Claw
         <ChevronRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
       </button>
     </motion.div>
@@ -103,7 +103,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
       className="max-w-xl w-full space-y-8"
     >
       <div className="space-y-2">
-        <div className="w-12 h-12 bg-red-50 text-[#E11D48] rounded-xl flex items-center justify-center mb-4">
+        <div className="w-12 h-12 bg-orange-50 text-[#FF6B00] rounded-xl flex items-center justify-center mb-4">
           <Bot className="w-6 h-6" />
         </div>
         <h2 className="text-3xl font-bold text-gray-900">第一步：配置 LLM</h2>
@@ -113,7 +113,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
       </div>
 
       <div className="grid grid-cols-1 gap-4">
-        <div className="p-4 border-2 border-[#E11D48] bg-red-50 rounded-2xl flex items-center justify-between">
+        <div className="p-4 border-2 border-[#FF6B00] bg-orange-50 rounded-2xl flex items-center justify-between">
           <div className="flex items-center gap-4">
             <div className="w-10 h-10 bg-white rounded-lg flex items-center justify-center shadow-sm">
               ✨
@@ -123,7 +123,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
               <p className="text-xs text-gray-500">推荐初学者使用，无需配置</p>
             </div>
           </div>
-          <Check className="w-5 h-5 text-[#E11D48]" />
+          <Check className="w-5 h-5 text-[#FF6B00]" />
         </div>
         
         <div className="p-4 border border-gray-200 rounded-2xl flex items-center justify-between opacity-50 cursor-not-allowed">
@@ -159,7 +159,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
       className="max-w-xl w-full space-y-8"
     >
       <div className="space-y-2">
-        <div className="w-12 h-12 bg-red-50 text-[#E11D48] rounded-xl flex items-center justify-center mb-4">
+        <div className="w-12 h-12 bg-orange-50 text-[#FF6B00] rounded-xl flex items-center justify-center mb-4">
           <Globe className="w-6 h-6" />
         </div>
         <h2 className="text-3xl font-bold text-gray-900">第二步：配置会话工具</h2>
@@ -170,11 +170,11 @@ export function Onboarding({ onComplete }: OnboardingProps) {
 
       <div className="grid grid-cols-3 gap-4">
         {['Telegram', '飞书', 'WhatsApp', 'Slack', 'Discord', 'WeChat'].map(name => (
-          <div key={name} className="p-4 border border-gray-200 rounded-2xl flex flex-col items-center gap-2 hover:border-[#E11D48] hover:bg-red-50 transition-all cursor-pointer group">
+          <div key={name} className="p-4 border border-gray-200 rounded-2xl flex flex-col items-center gap-2 hover:border-[#FF6B00] hover:bg-orange-50 transition-all cursor-pointer group">
             <div className="w-10 h-10 bg-gray-50 rounded-full flex items-center justify-center group-hover:bg-white transition-colors">
-              <MessageSquare className="w-5 h-5 text-gray-400 group-hover:text-[#E11D48]" />
+              <MessageSquare className="w-5 h-5 text-gray-400 group-hover:text-[#FF6B00]" />
             </div>
-            <span className="text-xs font-bold text-gray-600 group-hover:text-[#E11D48]">{name}</span>
+            <span className="text-xs font-bold text-gray-600 group-hover:text-[#FF6B00]">{name}</span>
           </div>
         ))}
       </div>
@@ -224,7 +224,7 @@ export function Onboarding({ onComplete }: OnboardingProps) {
         
         <div className="h-2 w-full bg-gray-100 rounded-full overflow-hidden">
           <motion.div 
-            className="h-full bg-[#E11D48]"
+            className="h-full bg-[#FF6B00]"
             initial={{ width: 0 }}
             animate={{ width: `${progress}%` }}
           />

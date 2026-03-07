@@ -7,7 +7,7 @@ export function RightPanel() {
     <div className="w-80 border-l border-gray-200 bg-white h-full overflow-y-auto flex flex-col">
       <div className="p-6 border-b border-gray-100">
         <h3 className="text-sm font-bold text-gray-900 flex items-center gap-2">
-          <Info className="w-4 h-4 text-[#E11D48]" />
+          <Info className="w-4 h-4 text-[#FF6B00]" />
           系统提示信息
         </h3>
       </div>

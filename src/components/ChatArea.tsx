@@ -63,7 +63,7 @@ export function ChatArea() {
               >
                 <div className={cn(
                   "w-9 h-9 rounded-full flex-shrink-0 flex items-center justify-center text-lg shadow-sm border",
-                  msg.role === 'user' ? 'bg-white border-gray-200' : 'bg-[#E11D48] border-[#E11D48] text-white'
+                  msg.role === 'user' ? 'bg-white border-gray-200' : 'bg-[#FF6B00] border-[#FF6B00] text-white'
                 )}>
                   {msg.role === 'user' ? '👤' : '🦞'}
                 </div>
@@ -114,7 +114,7 @@ export function ChatArea() {
               <button 
                 onClick={handleSend}
                 disabled={!input.trim()}
-                className="p-2 bg-[#E11D48] hover:bg-[#BE123C] disabled:bg-gray-300 text-white rounded-xl transition-all shadow-sm"
+                className="p-2 bg-[#FF6B00] hover:bg-[#E66000] disabled:bg-gray-300 text-white rounded-xl transition-all shadow-sm"
               >
                 <Send className="w-5 h-5" />
               </button>

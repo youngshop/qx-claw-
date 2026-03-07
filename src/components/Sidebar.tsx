@@ -21,7 +21,7 @@ export function Sidebar({ activeView, onViewChange, isCollapsed, onToggleCollaps
       <div className={cn("p-4 flex items-center justify-between mb-4", isCollapsed && "justify-center")}>
         {!isCollapsed && (
           <div className="flex items-center gap-2 overflow-hidden whitespace-nowrap">
-            <div className="w-8 h-8 bg-[#E11D48] rounded-lg flex items-center justify-center shrink-0">
+            <div className="w-8 h-8 bg-[#FF6B00] rounded-lg flex items-center justify-center shrink-0">
               <span className="text-white font-bold text-xs">QX</span>
             </div>
             <div>
@@ -31,7 +31,7 @@ export function Sidebar({ activeView, onViewChange, isCollapsed, onToggleCollaps
           </div>
         )}
         {isCollapsed && (
-          <div className="w-8 h-8 bg-[#E11D48] rounded-lg flex items-center justify-center shrink-0">
+          <div className="w-8 h-8 bg-[#FF6B00] rounded-lg flex items-center justify-center shrink-0">
             <span className="text-white font-bold text-xs">QX</span>
           </div>
         )}
@@ -53,12 +53,12 @@ export function Sidebar({ activeView, onViewChange, isCollapsed, onToggleCollaps
                 className={cn(
                   "w-full flex items-center gap-3 px-3 py-2 text-sm font-medium rounded-md transition-all",
                   activeView === item.id
-                    ? "bg-[#FCE7F3] text-[#E11D48]"
+                    ? "bg-orange-50 text-[#FF6B00]"
                     : "text-gray-600 hover:bg-gray-100 hover:text-gray-900",
                   isCollapsed && "justify-center px-0"
                 )}
               >
-                <item.icon className={cn("w-4 h-4 shrink-0", activeView === item.id ? "text-[#E11D48]" : "text-gray-400")} />
+                <item.icon className={cn("w-4 h-4 shrink-0", activeView === item.id ? "text-[#FF6B00]" : "text-gray-400")} />
                 {!isCollapsed && <span className="truncate">{item.label}</span>}
               </button>
             ))}
